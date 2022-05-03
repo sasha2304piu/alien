@@ -1,4 +1,4 @@
-/* let item_1 = 5;
+let item_1 = 5;
 console.log(item_1);
 let item_2 = 3;
 console.log(item_2);
@@ -17,18 +17,19 @@ console.log("item_6_type == " + item_6_type);
 let item_7 = String(item_6);
 let item_7_type = typeof item_7;
 console.log("item_7 == " + item_7);
-console.log("item_7_type == " + item_7_type); */
+console.log("item_7_type == " + item_7_type);
 
 const age_1 = 10;
 const age_2 = 18;
 const age_3 = 60;
-/* if (age_1 < age_2) {
+if (age_1 < age_2) {
     console.log("You don't have access cause your age is " + age_1 + "." + " It's less then " + age_2 + ".")
 } else if (age_1 >= age_2, age_1 < age_3) {
     console.log("Welcome!")
 } else if (age_1 > age_3) {
     console.log("Keep calm and look Culture channel.")
-} else { console.log("Technical work.") } */
+} else { console.log("Technical work.") }
+
 
 /* 1*:
 Преобразовать написанный код в 26-33 пунктах в функцию, принимающую на вход возраст.
@@ -37,7 +38,9 @@ const age_3 = 60;
 }
 Вывести в консоль результат работы функции с возрастами 17, 18, 61 */
 
-/* const CheckAge = function(age) {
+const CheckAge = function(age) {
+    const age_2 = 18;
+    const age_3 = 60;
     if (age < age_2) {
         console.log("You don't have access cause your age is " + age + "." + " It's less then " + age + ".")
     } else if (age >= age_2, age < age_3) {
@@ -49,12 +52,15 @@ const age_3 = 60;
 
 CheckAge(17)
 CheckAge(18)
-CheckAge(60) */
+CheckAge(60)
+
 
 /* 2*:
 Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка. */
 
-/* const CheckAge_Numb1 = function(age) {
+const CheckAge_Numb1 = function(age) {
+    const age_2 = 18;
+    const age_3 = 60;
     if (typeof(age) != 'number') {
         console.log("Error")
     } else if (age < age_2) {
@@ -73,14 +79,17 @@ CheckAge_Numb1(64)
 CheckAge_Numb1("eiu")
 CheckAge_Numb1("44")
 CheckAge_Numb1(60)
-CheckAge_Numb1(NaN) */
+CheckAge_Numb1(NaN)
+
 
 /* 3**:
 Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number 2 */
 
 // вариант 1
 
-/* const CheckAge_Numb2 = function(age) {
+const CheckAge_Numb2 = function(age) {
+    const age_2 = 18;
+    const age_3 = 60;
     if (age < age_2) {
         console.log("You don't have access cause your age is " + age + "." + " It's less then " + age_2 + ".")
     } else if (age >= age_2, age < age_3) {
@@ -99,12 +108,14 @@ CheckAge_Numb2(74)
 CheckAge_Numb2(60)
 CheckAge_Numb2('22ivrei')
 CheckAge_Numb2(true)
-CheckAge_Numb2(NaN) */
+CheckAge_Numb2(NaN)
 
 // вариант 2
 
-/* const CheckAge_Numb2 = function(age) {
+const CheckAge_Numb2 = function(age) {
     typeof(age) == Number; // или +age
+    const age_2 = 18;
+    const age_3 = 60;
     if (age < age_2) {
         console.log("You don't have access cause your age is " + age + "." + " It's less then " + age_2 + ".")
     } else if (age >= age_2, age < age_3) {
@@ -123,7 +134,7 @@ CheckAge_Numb2(74)
 CheckAge_Numb2(60)
 CheckAge_Numb2('22ivrei')
 CheckAge_Numb2(true)
-CheckAge_Numb2(NaN) */
+CheckAge_Numb2(NaN)
 
 
 /* 4***:
@@ -132,6 +143,8 @@ CheckAge_Numb2(NaN) */
 let age = prompt("Enter your age");
 //age = age.replace(/(^"|"$)/g, '');
 if (+age) {
+    const age_2 = 18;
+    const age_3 = 60;
     if (age < age_2) {
         alert("You don't have access cause your age is " + age + "." + " It's less then " + age_2 + ".")
     } else if (age >= age_2, age < age_3) {
