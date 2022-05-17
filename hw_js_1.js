@@ -39,8 +39,6 @@ if (age_1 < age_2) {
 Вывести в консоль результат работы функции с возрастами 17, 18, 61 */
 
 const CheckAge = function(age) {
-    const age_2 = 18;
-    const age_3 = 60;
     if (age < age_2) {
         console.log("You don't have access cause your age is " + age + "." + " It's less then " + age + ".")
     } else if (age >= age_2, age < age_3) {
@@ -59,8 +57,6 @@ CheckAge(60)
 Преобразовать задание 1* таким образом, чтобы первым делом в функции проверялся тип данных. И если он не Number - кидалась ошибка. */
 
 const CheckAge_Numb1 = function(age) {
-    const age_2 = 18;
-    const age_3 = 60;
     if (typeof(age) != 'number') {
         console.log("Error")
     } else if (age < age_2) {
@@ -88,8 +84,6 @@ CheckAge_Numb1(NaN)
 // вариант 1
 
 const CheckAge_Numb2 = function(age) {
-    const age_2 = 18;
-    const age_3 = 60;
     if (age < age_2) {
         console.log("You don't have access cause your age is " + age + "." + " It's less then " + age_2 + ".")
     } else if (age >= age_2, age < age_3) {
@@ -114,8 +108,6 @@ CheckAge_Numb2(NaN)
 
 const CheckAge_Numb2 = function(age) {
     typeof(age) == Number; // или +age
-    const age_2 = 18;
-    const age_3 = 60;
     if (age < age_2) {
         console.log("You don't have access cause your age is " + age + "." + " It's less then " + age_2 + ".")
     } else if (age >= age_2, age < age_3) {
@@ -143,8 +135,6 @@ CheckAge_Numb2(NaN)
 let age = prompt("Enter your age");
 //age = age.replace(/(^"|"$)/g, '');
 if (+age) {
-    const age_2 = 18;
-    const age_3 = 60;
     if (age < age_2) {
         alert("You don't have access cause your age is " + age + "." + " It's less then " + age_2 + ".")
     } else if (age >= age_2, age < age_3) {

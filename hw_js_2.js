@@ -13,7 +13,7 @@ while (b < 11) {
 const count1 = function(step) {
     let a = 2;
     let b = 1;
-    while (b < (step + 1)) {
+    while (b <= step) {
         console.log(a ** b);
         b++
     }
@@ -79,20 +79,16 @@ getWordStructure('Check-list')
 
 const isPalindrom = function(word) {
     word = word.toLowerCase()
-    if ((word.length % 2) === 0) {
-        var num = 0
-        while (num < (word.length / 2)) {
-            if (word.charAt(num) === word.charAt(word.length - (num + 1))) {
-                num++
-            } else {
-                break
-            }
-        }
-        if (num === (word.length / 2)) {
-            console.log("Палиндром")
+    var num = 0
+    while (num < (word.length / 2)) {
+        if (word.charAt(num) === word.charAt(word.length - (num + 1))) {
+            num++
         } else {
-            console.log("Не палиндром")
+            break
         }
+    }
+    if (num >= (word.length / 2)) {
+        console.log("Палиндром")
     } else {
         console.log("Не палиндром")
     }
@@ -100,5 +96,6 @@ const isPalindrom = function(word) {
 isPalindrom('abba')
 isPalindrom('abbbba')
 isPalindrom('Abba')
+isPalindrom('ababa')
 isPalindrom('abca')
 isPalindrom('a1ba')
