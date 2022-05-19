@@ -272,21 +272,20 @@
 									"\r",
 									"//3. Проверить, что в body приходит правильный string\r",
 									"\r",
-									"pm.test(\"Body matches string\", function () {\r",
-									"    pm.expect(pm.response.text()).to.include(\"\");\r",
-									"});\r",
-									"//не отрабатывает негативный сценарий\r",
 									"pm.test(\"StringCheck\", () => {\r",
 									"    pm.expect(pm.response.text()).to.include(\"This is the first responce from server!\");\r",
-									"});\r",
-									"\r",
-									"pm.test(\"Body is correct\", function () {\r",
-									"    pm.response.to.have.body(\"This is the first responce from server!\");\r",
-									"});\r",
+									"});//не отрабатывает негативный сценарий\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"\");\r",
+									"});//так тоже вполне проходит\r",
 									"\r",
 									"pm.test(\"StringCheck\", () => {\r",
 									"    pm.response.to.be.body(\"This is the first responce from server!\");\r",
-									"})"
+									"})\r",
+									"\r",
+									"pm.test(\"StringCheck\", () => {\r",
+									"    pm.expect(pm.response.text()).to.eql(\"This is the first responce from server!\");\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -341,7 +340,6 @@
 									"});\r",
 									"\r",
 									"//7. Спарсить request.\r",
-									"//let DataReq = request.data;\r",
 									"let DataReq = request.data;\r",
 									"console.log(DataReq)\r",
 									"\r",
@@ -635,7 +633,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://162.55.220.72:5007/object_info_4?name=Alex&age=41&salary=1500",
+							"raw": "http://162.55.220.72:5005/object_info_4?name=Alex&age=41&salary=1500",
 							"protocol": "http",
 							"host": [
 								"162",
@@ -643,7 +641,7 @@
 								"220",
 								"72"
 							],
-							"port": "5007",
+							"port": "5005",
 							"path": [
 								"object_info_4"
 							],
@@ -758,12 +756,11 @@
 									"\r",
 									"//22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.\r",
 									"\r",
-									"//тут не совсем понял, вывести ключи или пары ключ:значение, вывел ключи\r",
 									"for (let key in respData.person) {\r",
-									"    console.log(key)\r",
+									"    console.log(key, respData.person[key])\r",
 									"}\r",
 									"//или\r",
-									"Object.keys(respData.person).forEach((el) => {\r",
+									"Object.entries(respData.person).forEach((el) => {\r",
 									"    console.log(el);\r",
 									"})"
 								],
@@ -795,7 +792,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://162.55.220.72:5007/user_info_2",
+							"raw": "http://162.55.220.72:5005/user_info_2",
 							"protocol": "http",
 							"host": [
 								"162",
@@ -803,7 +800,7 @@
 								"220",
 								"72"
 							],
-							"port": "5007",
+							"port": "5005",
 							"path": [
 								"user_info_2"
 							]
